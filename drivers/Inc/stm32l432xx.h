@@ -335,6 +335,7 @@ typedef struct{
 
 
 #include "stm32l432xx_gpio_driver.h"
+#include "stm32l432xx_spi_driver.h"
 
 
 #endif /* INC_STM32L432XX_H_ */
