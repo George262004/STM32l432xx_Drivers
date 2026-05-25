@@ -1,0 +1,9 @@
+../drivers/Src/stm32l432xx_spi_driver.c:11:9:SPI_GetFlagStatus	2
+../drivers/Src/stm32l432xx_spi_driver.c:19:6:SPI_Init	4
+../drivers/Src/stm32l432xx_spi_driver.c:51:6:SPI_DeInit	1
+../drivers/Src/stm32l432xx_spi_driver.c:58:6:SPI_PeriClockControl	6
+../drivers/Src/stm32l432xx_spi_driver.c:79:6:SPI_SendData	1
+../drivers/Src/stm32l432xx_spi_driver.c:104:6:SPI_ReceiveData	1
+../drivers/Src/stm32l432xx_spi_driver.c:109:6:SPI_IRQInteruptConfig	1
+../drivers/Src/stm32l432xx_spi_driver.c:114:6:SPI_IRQPriorityConfig	1
+../drivers/Src/stm32l432xx_spi_driver.c:119:6:SPI_IRQHandling	1

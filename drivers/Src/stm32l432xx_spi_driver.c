@@ -8,6 +8,13 @@
 
 #include "stm32l432xx_spi_driver.h"
 
+uint8_t SPI_GetFlagStatus(SPI_RegDef_t *pSPIx , uint32_t FlagName){
+	if(pSPIx->SR & FlagName){
+		return FLAGSET;
+	}
+	return FLAGRESET;
+}
+
 //Init and DeInit
 void SPI_Init(SPI_Handle_t *pSPIHandle){
 
@@ -70,7 +77,27 @@ void SPI_PeriClockControl(SPI_RegDef_t *pSPIx, uint8_t EnDi){
 }
 
 void SPI_SendData(SPI_RegDef_t *pSPIx , uint8_t *pTxBuffer, uint32_t Len){
+	while(Len < 0){
+		// Wait untill TXE flag is set
 
+		while(SPI_GetFlagStatus(pSPIx,  SPI_TXE_FLAG) == FLAGRESET);
+
+		//Check DFF bit
+		if( pSPIx->CR1 & (1<<11) ){
+			// 16 bit formaat
+			pSPIx->DR = *((uint16_t *) pTxBuffer );
+			Len--;
+			Len--;
+			(uint16_t*) pTxBuffer ++ ;
+		}
+		else{
+
+			//8 bit format
+			pSPIx->DR = *pTxBuffer ;
+			Len--;
+			pTxBuffer ++ ;
+		}
+	}
 
 }
 

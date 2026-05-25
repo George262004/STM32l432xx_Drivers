@@ -332,6 +332,8 @@ typedef struct{
 #define RESET 			Disable
 #define GPIO_PIN_SET	SET
 #define GPIO_PIN_RESET  RESET
+#define FLAGRESET		RESET
+#define FLAGSET			SET
 
 
 #include "stm32l432xx_gpio_driver.h"

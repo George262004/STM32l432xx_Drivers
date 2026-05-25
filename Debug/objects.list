@@ -1,3 +1,4 @@
-"./Src/002Button_interrupt.o"
+"./Src/006spi_tx_testing.o"
 "./Startup/startup_stm32l432kcux.o"
 "./drivers/Src/stm32l432xx_gpio_driver.o"
+"./drivers/Src/stm32l432xx_spi_driver.o"

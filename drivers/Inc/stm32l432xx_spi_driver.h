@@ -64,6 +64,11 @@ typedef struct{
 #define SPI_SSM_EN						1
 #define SPI_SM_DI						0
 
+#define SPI_TXE_FLAG					(1 << 1)
+#define SPI_RXNE_FLAG					(1 << 0)
+#define SPI_BUSY_FLAG					(1 << 7)
+
+
 //Init and DeInit
 void SPI_Init(SPI_Handle_t *pSPIHandle);
 void SPI_DeInit(SPI_RegDef_t *pSPIx);

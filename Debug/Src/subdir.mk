@@ -5,13 +5,13 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Src/002Button_interrupt.c 
+../Src/006spi_tx_testing.c 
 
 OBJS += \
-./Src/002Button_interrupt.o 
+./Src/006spi_tx_testing.o 
 
 C_DEPS += \
-./Src/002Button_interrupt.d 
+./Src/006spi_tx_testing.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -21,7 +21,7 @@ Src/%.o Src/%.su Src/%.cyclo: ../Src/%.c Src/subdir.mk
 clean: clean-Src
 
 clean-Src:
-	-$(RM) ./Src/002Button_interrupt.cyclo ./Src/002Button_interrupt.d ./Src/002Button_interrupt.o ./Src/002Button_interrupt.su
+	-$(RM) ./Src/006spi_tx_testing.cyclo ./Src/006spi_tx_testing.d ./Src/006spi_tx_testing.o ./Src/006spi_tx_testing.su
 
 .PHONY: clean-Src
 
